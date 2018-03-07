@@ -1,0 +1,8 @@
+version: '2'
+services:
+  logstash:
+    image: kribor/docker-logstash-indexer-example:6.2.2
+    build: .
+    environment:
+      - LOGSTASH_PASSWD=changeme
+      - ELASTICSEARCH=127.0.0.1

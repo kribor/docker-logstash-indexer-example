@@ -1,0 +1,21 @@
+# ------------ Data path ------------------
+#
+# Which directory should be used by logstash and its plugins
+# for any persistent needs. Defaults to LOGSTASH_HOME/data
+#
+path.data: /usr/share/logstash/data/
+
+# ------------ Pipeline Configuration Settings --------------
+#
+# Where to fetch the pipeline configuration for the main pipeline
+#
+path.settings: /usr/share/logstash/pipeline/
+
+# ------------ Dead-Letter Queue Settings --------------
+# Flag to turn on dead-letter queue.
+#
+dead_letter_queue.enable: false
+
+xpack.monitoring.elasticsearch.url: http://${ELASTICSEARCH}:9200
+xpack.monitoring.elasticsearch.username: logstash_system # Make sure to use this default user for monitoring
+xpack.monitoring.elasticsearch.password: changeme
